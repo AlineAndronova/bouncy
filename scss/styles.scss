@@ -1,0 +1,329 @@
+@import 'normalize.css';
+@import 'layout';
+
+$primary-color: #464646;
+
+$primary-font: 'Open-Sans', sans-serif;
+$secondary-font: 'Source Sans Pro', sans-serif;
+
+@mixin section-title {
+	font-family: $secondary-font;
+	color: #333b46;
+	font-weight: 300;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+@mixin section-subtitle {
+	font-family: $secondary-font;
+	font-weight: 300;
+	color: #92969d;
+	font-size: 16px;
+	margin-top: 30px;
+}
+
+.ba-left {
+	float: left;
+}
+
+.ba-right {
+	float: right;
+}
+
+
+// styles for .ba-header
+
+.ba-header {
+	background-color: transparent;
+	padding: 45px 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 5;
+}
+
+.ba-logo {
+	margin: 20px 70px;
+}
+
+.ba-logo__image {
+	fill: #fff;
+	height: 20px;
+	width: 110px;
+}
+
+.ba-navigation {
+	&__list {
+		list-style-type: none;
+	}
+	&__item {
+		display: inline-block;
+	}
+	&__link {
+		font-family: $secondary-font;
+		font-weight: 300;
+		font-size: 16px;
+		text-decoration: none;
+		color: #ffffff;
+		border: 1px solid transparent;
+		border-radius: 50px;
+		transition: .2s ease-in;
+		padding: 7px 20px;
+		&:hover {
+			border-color: #ffffff;
+		}
+	}
+}
+
+.ba-navigation__link--active {
+	border-color: #ffffff;
+}
+
+.ba-navigation__item + .ba-navigation__item {
+	margin-left: 5px;
+}
+
+// styles for .ba-banner
+
+.ba-banner {
+	background: url(../images/bg-1.png) center center no-repeat;
+	background-size: cover;
+	padding: 250px 0 80px;
+	position: relative;
+	z-index: 1;
+	&__text {
+		width: 630px;
+		display: block;
+		margin: 50px auto;
+		text-align: center;
+	}
+}
+
+.ba-site-title,
+.ba-site-subtitle {
+	font-family: $secondary-font;
+	color: #ffffff;
+	font-weight: 300;
+}
+
+.ba-site-title {
+	font-size: 36px;
+	text-transform: uppercase;
+	letter-spacing: 7px;
+}
+
+.ba-site-subtitle {
+	font-size: 18px;
+	letter-spacing: 1px;
+	line-height: 1.5;
+	margin: 30px 0 220px;
+}
+
+.ba-scroll__image {
+	display: block;
+	margin: 0 auto;
+	opacity: 1;
+	transition: .2s ease-in;
+}
+
+// styles for .ba-team
+
+.ba-team {
+	padding: 55px 0 90px;
+	height: 800px;
+	background-color: #ffffff;
+	&__text {
+		display: block;
+		margin: 0 auto;
+		width: 500px;
+		text-align: center;
+	}
+}
+
+.ba-section-title {
+	@include section-title;
+}
+
+.ba-section-subtitle {
+	@include section-subtitle;
+	line-height: 1.5;
+}
+
+.ba-slide {
+	padding-left: 80px;
+	position: relative;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 4px;
+		height: 10px;
+		color: #19bd9a;
+	}
+}
+
+.ba-slider__text {
+	width: 400px;
+	text-align: right;
+}
+
+.ba-slider__title {
+	padding-right: 40px;
+	border-right: 4px solid #19bd9a;
+}
+
+.ba-slider__name {
+	font-family: $primary-font;
+	color: #525252;
+	font-weight: 400;
+	font-size: 22px;
+	margin: 10px 0 20px;
+}
+
+.ba-slider__job {
+	font-family: $secondary-font;
+	font-weight: 300;
+	font-style: italic;
+	color: #c4c7ca;
+	font-size: 15px;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+.ba-slider__info {
+	font-family: $primary-font;
+	font-weight: 400;
+	color: #c4c7ca;
+	font-size: 14px;
+	line-height: 1.9;
+}
+
+.ba-slider {
+	width: 1050px;
+	padding: 60px 0 150px;
+}
+
+// styles for .ba-contact
+
+.ba-contact {
+	padding: 50px 0;
+	background: url(../images/bg-2.png) center center no-repeat;
+	background-size: cover;
+	text-align: center;
+}
+
+.ba-section-title--light {
+	font-family: $secondary-font;
+	font-size: 24px;
+	font-weight: 300;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin: 0;
+}
+
+.ba-button {
+	display: inline-block;
+	background-color: transparent;
+	border: 1px solid #fff;
+	border-radius: 50px;
+	padding: 10px 30px;
+	font-family: $primary-font;
+	font-weight: 400;
+	color: #fff;
+	text-decoration: none;
+	margin-top: 30px;
+	transition: .2s ease-in;
+	letter-spacing: 1px;
+	&:hover {
+		background-color: #fff;
+		color: #1e1e1e;
+	}
+}
+
+// styles for .ba-testimonials
+
+.ba-testimonials {
+	padding: 50px 0 100px;
+	background-color: #f3f3f3;
+	&__text {
+		width: 500px;
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+	}
+	&__container {
+		background-color: #ffffff;
+		padding: 50px 100px;
+	}
+	&__info {
+		font-family: $primary-font;
+		font-weight: 400;
+		color: #c4c7ca;
+		font-size: 14px;
+		line-height: 1.9;
+		width: 785px;
+	}
+	&__signature {
+		color: #323a45;
+		text-transform: uppercase;
+		margin: 0;
+	}
+	&__slider {
+		padding: 50px 0;
+	}
+}
+
+.ba-text--blue {
+	font-family: $primary-font;
+	font-weight: 700;
+	color: #19bd9a;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+// styles for .ba-map
+
+.ba-contact-us {
+	padding: 70px 0 50px;
+	&__text {
+		width: 500px;
+		margin: 0 auto;
+		text-align: center;
+	}
+}
+
+.ba-map {
+    height: 400px;
+}
+
+// footer
+
+
+.ba-footer {
+	padding: 50px;
+	text-align: center;
+}
+
+.ba-logo-dark {
+	font-size: 25px;
+    fill: #323a45;
+ 	filter: url(#filter);
+}
+
+.fa {
+	display: inline-block;
+	margin: 0 auto;
+	text-decoration: none;
+	height: 35px;
+	width: 35px;
+	padding: 10px;
+	border: 1px solid transparent;
+	border-radius: 50%;
+	background-color: #3b5998;
+	color: #fff;
+}
+
+.fa + .fa {
+	margin-left: 10px;
+}
